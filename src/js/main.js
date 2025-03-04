@@ -32,6 +32,8 @@ const randomNumber = getRandomNumber(100);
 
 console.log("El número aleatorio es " + randomNumber);
 
+let acc = 0;
+
 const handleclick = (event) => {
   event.preventDefault();
   console.log("has hecho click");
@@ -51,6 +53,15 @@ const handleclick = (event) => {
   if (selectedNumber < 1 || selectedNumber > 100) {
     listItem1.innerHTML = "El número debe estar entre 1 y 100";
   }
+
+  //Segunda parte
+
+  function clickTimes() {
+    acc = acc + 1;
+    listItem2.innerHTML = "Número de intentos: " + acc;
+  }
+
+  clickTimes();
 };
 
 btn.addEventListener("click", handleclick);
