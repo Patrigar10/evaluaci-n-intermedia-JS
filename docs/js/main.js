@@ -1,2 +1,2 @@
-console.log(">> Ready :)");
+const l=document.querySelector(".js-number-input"),s=document.querySelector(".js-btn"),n=document.querySelector(".js-list-item1"),i=document.querySelector(".js-list-item2");function a(t){return Math.ceil(Math.random()*t)}const o=a(100);console.log("El número aleatorio es "+o);let c=0;const m=t=>{t.preventDefault(),console.log("has hecho click");const e=parseFloat(l.value);console.log("El número seleccionado es "+e),e===o&&(n.innerHTML="Has ganado campeona!!!"),e>o&&(n.innerHTML="Demasiado alto"),e<o&&(n.innerHTML="Demasiado bajo"),(e<1||e>100)&&(n.innerHTML="El número debe estar entre 1 y 100");function r(){c=c+1,i.innerHTML="Número de intentos: "+c}r()};s.addEventListener("click",m);
 //# sourceMappingURL=main.js.map
